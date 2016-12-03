@@ -602,11 +602,12 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 						  setTimeout(function(){
  							  
  									$scope.Devices[index].DisplayUpgrading=false;
+ 									  setTimeout(function(){
  									$("#"+$scope.Devices[index].Data.Region).removeClass("disabledbutton");
-	 									
+ 									  }, 20000);
 	 								
 	 		        			   
-	 		        			  }, 10000);
+	 		        			  }, 9000);
 						 
 			        		   
 					 }else{

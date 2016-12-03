@@ -1246,7 +1246,7 @@
         "type": "function",
         "z": "f657b46d.c7ee58",
         "name": "Update Firmware payload",
-        "func": "var globalContext = context.global; \n\nif(globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0] < JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]){\n    \n    \nvar Serial = msg.payload.SerialNo;\nglobalContext.set(\"pasueDevice\", Serial);\n\nsetTimeout(function(){\nglobalContext.get(msg.payload.SerialNo).WaterUsage = Math.floor(Math.random() * (28 - 20 + 1) + 20);\nglobalContext.get(msg.payload.SerialNo).firmware = \"v4.0\"\nglobalContext.set(\"pasueDevice\", null);    \n}, 10000);\n\n}\n\n\nreturn {\"current\" : globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0],\"requested\":JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]};\n",
+        "func": "var globalContext = context.global; \n\nif(globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0] < JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]){\n    \n    \nvar Serial = msg.payload.SerialNo;\nglobalContext.set(\"pasueDevice\", Serial);\n\nsetTimeout(function(){\nglobalContext.get(msg.payload.SerialNo).WaterUsage = Math.floor(Math.random() * (32 - 25 + 1) + 25);\nglobalContext.get(msg.payload.SerialNo).firmware = \"v4.0\"\nglobalContext.set(\"pasueDevice\", null);    \n}, 10000);\n\n}\n\n\nreturn {\"current\" : globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0],\"requested\":JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]};\n",
         "outputs": 1,
         "noerr": 0,
         "x": 562.8958129882812,
