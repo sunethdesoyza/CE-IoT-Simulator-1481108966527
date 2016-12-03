@@ -533,6 +533,11 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 		    //newValue and oldValue are equal at that point
 		});
 	
+	 
+	 
+	 
+	 function connect() {	 
+	 
  if ("WebSocket" in window)
      {
        // alert("WebSocket is supported by your Browser!");
@@ -700,8 +705,17 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
         ws.onclose = function()
         { 
            // websocket is closed.
-           alert("Connection is closed..."); 
+           //alert("Connection is closed..."); 
+           console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
+           setTimeout(function() {
+             connect();
+           }, 1000)
         };
+        
+        ws.onerror = function(err) {
+            console.error('Socket encountered error: ', err.message, 'Closing socket')
+            ws.close()
+          };
      }
      
      else
@@ -709,6 +723,12 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
         // The browser doesn't support WebSocket
         alert("WebSocket NOT supported by your Browser!");
      }
+ 
+	 }
+ 
+	 connect();
+ 
+ 
 	
 	
 }]);
