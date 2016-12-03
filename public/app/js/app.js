@@ -594,47 +594,20 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 					//console.log("Upgrade firmware version to" + JSON.parse(received_msg).firmware);
 					 if($scope.Devices[index].Data.firmware.match(/\d+/)[0] < JSON.parse(received_msg).firmware.match(/\d+/)[0]){
 						 
-						   //console.log("Currrent version is lower that expected hence upgrading");
-						   $http({ 
-			 					  method: 'GET',
-			 					  url: 'http://'+$location.host()+':'+$location.port()+'/Pause?Serial='+$scope.Devices[index].Data.SerialNo
-			 					}).then(function successCallback(response) {
-			 					    // this callback will be called asynchronously
-			 					    // when the response is available
-			 						
-			 						 
-			 							 $('html, body').animate({scrollTop: $("#"+$scope.Devices[index].Data.Region).offset().top -80 }, 'slow');
-			 			                   
-			 			              
-			 						 $("#"+$scope.Devices[index].Data.Region).addClass("disabledbutton");
-			 						 
-			 		        		   //console.log("Firmware update command "+ $scope.Devices[index].Data.Region);
-			 		        		  $scope.Devices[index].DisplayUpgrading=true;
-			 						  setTimeout(function(){
-			 							  
-			 							 $http({ 
-			 								  method: 'GET',
-			 								  url: 'http://'+$location.host()+':'+$location.port()+'/UpdateFirmware?Serial='+$scope.Devices[index].Data.SerialNo
-			 								}).then(function successCallback(response) {
-			 								    // this callback will be called asynchronously
-			 								    // when the response is available
-			 									$scope.Devices[index].DisplayUpgrading=false;
-			 									$("#"+$scope.Devices[index].Data.Region).removeClass("disabledbutton");
-			 									
-			 								  }, function errorCallback(response) {
-			 									 
-			 								    // called asynchronously if an error occurs
-			 								    // or server returns response with an error status.
-			 								  });
-			 		        			   
-			 		        			  }, 10000);
-			 						
-			 					  }, function errorCallback(response) {
-			 						 
-			 					    // called asynchronously if an error occurs
-			 					    // or server returns response with an error status.
-			 					  });
-			        		   
+						 
+						 $('html, body').animate({scrollTop: $("#"+$scope.Devices[index].Data.Region).offset().top -80 }, 'slow');
+						 $("#"+$scope.Devices[index].Data.Region).addClass("disabledbutton");
+						 $scope.Devices[index].DisplayUpgrading=true;
+						 
+						  setTimeout(function(){
+ 							  
+ 									$scope.Devices[index].DisplayUpgrading=false;
+ 									$("#"+$scope.Devices[index].Data.Region).removeClass("disabledbutton");
+	 									
+	 								
+	 		        			   
+	 		        			  }, 10000);
+						 
 			        		   
 					 }else{
 						 

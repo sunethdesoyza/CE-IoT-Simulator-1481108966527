@@ -376,8 +376,8 @@
         "repeat": "",
         "crontab": "",
         "once": false,
-        "x": 709,
-        "y": 616,
+        "x": 743,
+        "y": 52,
         "wires": [
             [
                 "11ffc5cb.240c4a",
@@ -393,8 +393,8 @@
         "active": false,
         "console": "false",
         "complete": "payload",
-        "x": 977,
-        "y": 526,
+        "x": 1079,
+        "y": 371,
         "wires": []
     },
     {
@@ -404,8 +404,8 @@
         "name": "",
         "server": "7a5daf6a.5df79",
         "client": "",
-        "x": 824.0001220703125,
-        "y": 694.111328125,
+        "x": 790.0001220703125,
+        "y": 330.111328125,
         "wires": []
     },
     {
@@ -835,7 +835,7 @@
         "y": 111,
         "wires": [
             [
-                "b34ffd5f.90933"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -865,7 +865,7 @@
         "y": 162,
         "wires": [
             [
-                "b34ffd5f.90933"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -895,7 +895,7 @@
         "y": 265,
         "wires": [
             [
-                "b34ffd5f.90933"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -925,7 +925,7 @@
         "y": 316,
         "wires": [
             [
-                "b34ffd5f.90933"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -955,7 +955,7 @@
         "y": 367,
         "wires": [
             [
-                "b34ffd5f.90933"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -985,7 +985,7 @@
         "y": 425,
         "wires": [
             [
-                "b34ffd5f.90933"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -1015,7 +1015,245 @@
         "y": 473,
         "wires": [
             [
-                "b34ffd5f.90933"
+                "11ffc5cb.240c4a"
+            ]
+        ]
+    },
+    {
+        "id": "f934e546.178208",
+        "type": "ibmiot in",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "1797B5-D143-4F90",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 229.8957977294922,
+        "y": 1415.1112060546875,
+        "wires": [
+            [
+                "35465049.c8278"
+            ]
+        ]
+    },
+    {
+        "id": "8b0e2282.09b2e",
+        "type": "ibmiot in",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice2",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "OA2895-64OB-DBLF",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 242.8958282470703,
+        "y": 1468.1112060546875,
+        "wires": [
+            [
+                "35465049.c8278"
+            ]
+        ]
+    },
+    {
+        "id": "ac2fbdea.521ab",
+        "type": "ibmiot in",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice3",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "5D5B6D-B3ED-4BE4",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 245.8958282470703,
+        "y": 1571.1112060546875,
+        "wires": [
+            [
+                "35465049.c8278"
+            ]
+        ]
+    },
+    {
+        "id": "c5ea2e46.40bbd",
+        "type": "ibmiot in",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice4",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "F3386A-2FB4-4E7B",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 242.8958282470703,
+        "y": 1622.1112060546875,
+        "wires": [
+            [
+                "35465049.c8278"
+            ]
+        ]
+    },
+    {
+        "id": "a7a1ace5.326bb",
+        "type": "ibmiot in",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice5",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "5AI0TO-FEN7-WY68",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 241.8958282470703,
+        "y": 1673.1112060546875,
+        "wires": [
+            [
+                "35465049.c8278"
+            ]
+        ]
+    },
+    {
+        "id": "13bf046.d2364fc",
+        "type": "ibmiot in",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice6",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "FCD840-C37E-455D",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 255.8958282470703,
+        "y": 1731.1112060546875,
+        "wires": [
+            [
+                "35465049.c8278"
+            ]
+        ]
+    },
+    {
+        "id": "4c1eba6e.2e2574",
+        "type": "ibmiot in",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice7",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "F3386A-2FB4-4E7B",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 245.8958282470703,
+        "y": 1779.1112060546875,
+        "wires": [
+            [
+                "35465049.c8278"
+            ]
+        ]
+    },
+    {
+        "id": "c824a044.9bfc3",
+        "type": "debug",
+        "z": "f657b46d.c7ee58",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 792.8367767333984,
+        "y": 1477.982666015625,
+        "wires": []
+    },
+    {
+        "id": "35465049.c8278",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "Update Firmware payload",
+        "func": "var globalContext = context.global; \n\nif(globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0] < JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]){\n    \n    \nvar Serial = msg.payload.SerialNo;\nglobalContext.set(\"pasueDevice\", Serial);\n\nsetTimeout(function(){\nglobalContext.get(msg.payload.SerialNo).WaterUsage = Math.floor(Math.random() * (28 - 20 + 1) + 20);\nglobalContext.get(msg.payload.SerialNo).firmware = \"v4.0\"\nglobalContext.set(\"pasueDevice\", null);    \n}, 10000);\n\n}\n\n\nreturn {\"current\" : globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0],\"requested\":JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 562.8958129882812,
+        "y": 1378,
+        "wires": [
+            [
+                "c824a044.9bfc3"
             ]
         ]
     }
