@@ -609,7 +609,7 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
  									
 	 								
 	 		        			   
-	 		        			  }, 9500);
+	 		        			  }, 10000);
 						 
 			        		   
 					 }else{
