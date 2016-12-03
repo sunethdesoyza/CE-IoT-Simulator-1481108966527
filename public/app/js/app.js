@@ -547,7 +547,7 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 			
         ws.onopen = function()
         {
-        	$scope.Devices=[];
+        	//$scope.Devices=[];
         
            // Web Socket is connected, send data using send()
            //ws.send("Message to send");
