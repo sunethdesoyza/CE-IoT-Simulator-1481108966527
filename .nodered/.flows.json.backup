@@ -1,0 +1,1022 @@
+[
+    {
+        "id": "f657b46d.c7ee58",
+        "type": "tab",
+        "label": "Flow 1"
+    },
+    {
+        "id": "244283f1.61aa5c",
+        "type": "tab",
+        "label": "Flow 2"
+    },
+    {
+        "id": "7a5daf6a.5df79",
+        "type": "websocket-listener",
+        "z": "",
+        "path": "/ws/data",
+        "wholemsg": "false"
+    },
+    {
+        "id": "cf80494e.0c58a8",
+        "type": "ibmiot",
+        "z": "",
+        "name": "MyApplication",
+        "keepalive": "60",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "faf0a619.10f7a8",
+        "type": "ibmiot",
+        "z": "",
+        "name": "MyApplication2",
+        "keepalive": "60",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "bb1f2ea1.9e336",
+        "type": "inject",
+        "z": "f657b46d.c7ee58",
+        "name": "",
+        "topic": "",
+        "payload": "Inializing the Devices",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 301.66668701171875,
+        "y": 377,
+        "wires": [
+            [
+                "eb6e5013.66a4c"
+            ]
+        ]
+    },
+    {
+        "id": "eb6e5013.66a4c",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "SimulatorInitializer",
+        "func": "var globalContext = context.global;\nglobalContext.set(\"pasueDevice\", null);\nglobalContext.set(\"1797B5-D143-4F90\",{\n    \"active\": true,\n    \"currentCycle\": 25,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 67,\n        \"FamilyMembers\": 5,\n        \"income\": 48000,\n        \"Name\": \"Francene Noelia\",\n        \"zipcode\": 95118\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 56.48145,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 3,\n    \"location\": {\n        \"lat\": 44.694094,\n        \"long\": -89.707840\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-100\",\n    \"name\": \"washer1\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"1797B5-D143-4F90\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 2,\n    \"timestamp\": 1480333728717,\n    \"type\": \"washer\",\n    \"vibration\": 44,\n    \"waterPressure\": 88.70406,\n    \"WaterUsage\": 55,\n    \"Region\":\"Wisconsin\"\n});\n\nglobalContext.set(\"OA2895-64OB-DBLF\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 55,\n        \"FamilyMembers\": 3,\n        \"income\": 42000,\n        \"Name\": \"James Smith\",\n        \"zipcode\": 20012\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 47.350494,\n        \"long\": -120.369074\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-100\",\n    \"name\": \"washer2\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"OA2895-64OB-DBLF\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 5,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 45,\n    \"Region\":\"Washington\"\n});\n\nglobalContext.set(\"5D5B6D-B3ED-4BE4\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 68,\n        \"FamilyMembers\": 6,\n        \"income\": 50000,\n        \"Name\": \"Linda Hill\",\n        \"zipcode\": 97202\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 44.0538628,\n        \"long\": -125.0289958\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-101\",\n    \"name\": \"washer3\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"5D5B6D-B3ED-4BE4\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 3,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 34,\n    \"Region\":\"Oregon\"\n});\nglobalContext.set(\"F3386A-2FB4-4E7B\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 30,\n        \"FamilyMembers\": 3,\n        \"income\": 28000,\n        \"Name\": \"Kevin Young\",\n        \"zipcode\": 59001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 46.5918955,\n        \"long\": -114.5345864\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-102\",\n    \"name\": \"washer4\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"F3386A-2FB4-4E7B\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 3,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 30,\n    \"Region\":\"Montana\"\n});\nglobalContext.set(\"5AI0TO-FEN7-WY68\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 40,\n        \"FamilyMembers\": 4,\n        \"income\": 38000,\n        \"Name\": \"Edward Nelson\",\n        \"zipcode\": 90003\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 37.1869527,\n        \"long\": -123.7668564\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-102\",\n    \"name\": \"washer5\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"5AI0TO-FEN7-WY68\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 3,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 32,\n    \"Region\":\"California\"\n});\nglobalContext.set(\"FCD840-C37E-455D\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 50,\n        \"FamilyMembers\": 5,\n        \"income\": 38000,\n        \"Name\": \"Elizabeth Lee\",\n        \"zipcode\": 80203\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 38.9764399,\n        \"long\": -107.7945178\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-103\",\n    \"name\": \"washer6\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"FCD840-C37E-455D\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 3,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 31,\n    \"Region\":\"Colorado\"\n});\nglobalContext.set(\"F3386A-2FB4-4E7B\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 32,\n        \"FamilyMembers\": 2,\n        \"income\": 25000,\n        \"Name\": \"Jason Nelson\",\n        \"zipcode\": 85001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 34.0862526,\n        \"long\": -116.4257536\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-104\",\n    \"name\": \"washer7\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"F3386A-2FB4-4E7B\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 3,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 33,\n    \"Region\":\"Arizona\"\n});\n\nmsg.payload = \"Simulation Started\";\nmsg.headers = {\n         \"Content-type\" : \"text/plain\"\n     }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 555.6666870117188,
+        "y": 301,
+        "wires": [
+            [
+                "58c41334.08d3dc"
+            ]
+        ]
+    },
+    {
+        "id": "58c41334.08d3dc",
+        "type": "debug",
+        "z": "f657b46d.c7ee58",
+        "name": "Initialized",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 792.6666870117188,
+        "y": 298,
+        "wires": []
+    },
+    {
+        "id": "863a38b9.43cfb8",
+        "type": "comment",
+        "z": "f657b46d.c7ee58",
+        "name": "Initializer",
+        "info": "It runs on the start and initilizes the values to abnormal status\n",
+        "x": 276.66668701171875,
+        "y": 339,
+        "wires": []
+    },
+    {
+        "id": "f3c569ac.fd4dd8",
+        "type": "http in",
+        "z": "f657b46d.c7ee58",
+        "name": "[Get] Restart Simulation",
+        "url": "/StartSimulation",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 315,
+        "y": 219,
+        "wires": [
+            [
+                "eb6e5013.66a4c",
+                "f3106b2f.fa46d8"
+            ]
+        ]
+    },
+    {
+        "id": "e8130436.2bb648",
+        "type": "comment",
+        "z": "f657b46d.c7ee58",
+        "name": "Restart Simulation",
+        "info": "it restart the simulation",
+        "x": 299,
+        "y": 174,
+        "wires": []
+    },
+    {
+        "id": "17994247.76c7de",
+        "type": "http response",
+        "z": "f657b46d.c7ee58",
+        "name": "Resonse",
+        "x": 783,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fb9303cb.8d40b",
+        "type": "inject",
+        "z": "f657b46d.c7ee58",
+        "name": "Send data after every 2 sec",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "x": 297,
+        "y": 550,
+        "wires": [
+            [
+                "882768f.5110598",
+                "43c7efe9.2e2be",
+                "e35fb55f.09fff8",
+                "f922ec89.0da66",
+                "48ef7348.31f31c",
+                "e6935f66.5b89d",
+                "2b4ab77.fbb9c48"
+            ]
+        ]
+    },
+    {
+        "id": "b7af7bc3.e6ef48",
+        "type": "comment",
+        "z": "f657b46d.c7ee58",
+        "name": "Push payload",
+        "info": "it pushes the payload with the current values to IOTF",
+        "x": 249,
+        "y": 507.00001525878906,
+        "wires": []
+    },
+    {
+        "id": "1cedc7f3.931798",
+        "type": "http in",
+        "z": "f657b46d.c7ee58",
+        "name": "UpdateFirmware",
+        "url": "/UpdateFirmware",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 246,
+        "y": 1072.0000610351562,
+        "wires": [
+            [
+                "e5edf1bd.8baee"
+            ]
+        ]
+    },
+    {
+        "id": "22fa375f.139048",
+        "type": "comment",
+        "z": "f657b46d.c7ee58",
+        "name": "Update Firmware command",
+        "info": "",
+        "x": 287,
+        "y": 1028.0000610351562,
+        "wires": []
+    },
+    {
+        "id": "e5edf1bd.8baee",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "Update Firmware payload",
+        "func": "var globalContext = context.global; \nglobalContext.get(msg.req.query.Serial).WaterUsage = Math.floor(Math.random() * (28 - 20 + 1) + 20);\nglobalContext.get(msg.req.query.Serial).firmware = \"v4.0\"\nmsg.payload =globalContext.get(msg.req.query.Serial);\nglobalContext.set(\"pasueDevice\", null);   \nmsg.headers = { \"Content-type\" : \"text/plain\" }\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 546,
+        "y": 1072.0000457763672,
+        "wires": [
+            [
+                "f1f8ee7.2a8b31",
+                "445e3e3b.2ff0c"
+            ]
+        ]
+    },
+    {
+        "id": "f1f8ee7.2a8b31",
+        "type": "debug",
+        "z": "f657b46d.c7ee58",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 867,
+        "y": 1043.0000457763672,
+        "wires": []
+    },
+    {
+        "id": "445e3e3b.2ff0c",
+        "type": "http response",
+        "z": "f657b46d.c7ee58",
+        "name": "",
+        "x": 851,
+        "y": 1114.0001068115234,
+        "wires": []
+    },
+    {
+        "id": "61290f4b.b84c3",
+        "type": "http in",
+        "z": "f657b46d.c7ee58",
+        "name": "Pause Device",
+        "url": "/Pause",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 242,
+        "y": 1235.0000610351562,
+        "wires": [
+            [
+                "3fc8a77d.c228c8"
+            ]
+        ]
+    },
+    {
+        "id": "6b6682e8.feb3ec",
+        "type": "http response",
+        "z": "f657b46d.c7ee58",
+        "name": "Resonse",
+        "x": 827,
+        "y": 1234.0000610351562,
+        "wires": []
+    },
+    {
+        "id": "3fc8a77d.c228c8",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "set values for pause",
+        "func": "var globalContext = context.global;\nvar Serial = msg.req.query.Serial;\nglobalContext.set(\"pasueDevice\", Serial);\nmsg.payload = \"Paused\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 531,
+        "y": 1237.0000610351562,
+        "wires": [
+            [
+                "6b6682e8.feb3ec"
+            ]
+        ]
+    },
+    {
+        "id": "882768f.5110598",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "1797B5-D143-4F90",
+        "func": "var globalContext = context.global; \nif(globalContext.get('1797B5-D143-4F90').SerialNo != globalContext.get('pasueDevice') ){\n    msg.payload = {\"d\":globalContext.get('1797B5-D143-4F90')};\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 634,
+        "y": 482,
+        "wires": [
+            [
+                "5816d9b1.75e528"
+            ]
+        ]
+    },
+    {
+        "id": "a6e75cad.a0df4",
+        "type": "comment",
+        "z": "f657b46d.c7ee58",
+        "name": "Pause a device",
+        "info": "",
+        "x": 255.34027099609375,
+        "y": 1184.2222900390625,
+        "wires": []
+    },
+    {
+        "id": "43c7efe9.2e2be",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "OA2895-64OB-DBLF",
+        "func": "var globalContext = context.global; \nif(globalContext.get('OA2895-64OB-DBLF').SerialNo != globalContext.get('pasueDevice') ){\n    msg.payload = {\"d\":globalContext.get('OA2895-64OB-DBLF')};\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 635,
+        "y": 548,
+        "wires": [
+            [
+                "27089cc4.b36404"
+            ]
+        ]
+    },
+    {
+        "id": "b34ffd5f.90933",
+        "type": "function",
+        "z": "244283f1.61aa5c",
+        "name": "Simulate Data",
+        "func": "var globalContext = context.global; \nvar temp = Math.floor(Math.random()*(2)+1);\nwater = Math.random() < 0.5 ? -1 : 1; \nmsg.payload.d.temperature = msg.payload.d.temperature + temp;\nmsg.payload.d.WaterUsage = msg.payload.d.WaterUsage + water\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 553,
+        "y": 777,
+        "wires": [
+            [
+                "11ffc5cb.240c4a"
+            ]
+        ]
+    },
+    {
+        "id": "5816d9b1.75e528",
+        "type": "ibmiot out",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "outputType": "evt",
+        "deviceId": "iotdevice",
+        "deviceType": "IOTDevice",
+        "eventCommandType": "data",
+        "format": "json",
+        "data": "data",
+        "qos": "2",
+        "name": "1797B5-D143-4F90",
+        "service": "registered",
+        "x": 894,
+        "y": 482,
+        "wires": []
+    },
+    {
+        "id": "27089cc4.b36404",
+        "type": "ibmiot out",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "outputType": "evt",
+        "deviceId": "iotdevice2",
+        "deviceType": "IOTDevice",
+        "eventCommandType": "data",
+        "format": "json",
+        "data": "data",
+        "qos": "2",
+        "name": "OA2895-64OB-DBLF",
+        "service": "registered",
+        "x": 893,
+        "y": 546,
+        "wires": []
+    },
+    {
+        "id": "ffe0c766.486018",
+        "type": "inject",
+        "z": "244283f1.61aa5c",
+        "name": "StartFirmwareUpdate",
+        "topic": "",
+        "payload": "{ \"dbAPIUrl\": \"https://3f1ce874-c334-4ce5-b04b-d1a08f336bb0-bluemix.cloudant.com/verdict_document/_design/Verdict/_search/searchForVerdict?q=*%3A*\",\"dbUsername\":\"xxx\",\"dbpassword\":\"yyy\",\"SerialNo\":\"OA2895-64OB-DBLF\",\"firmware\":\"v4.0\" }",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 709,
+        "y": 616,
+        "wires": [
+            [
+                "11ffc5cb.240c4a",
+                "5af1230.36e66dc"
+            ]
+        ]
+    },
+    {
+        "id": "5af1230.36e66dc",
+        "type": "debug",
+        "z": "244283f1.61aa5c",
+        "name": "Firmware Update Command",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 977,
+        "y": 526,
+        "wires": []
+    },
+    {
+        "id": "11ffc5cb.240c4a",
+        "type": "websocket out",
+        "z": "244283f1.61aa5c",
+        "name": "",
+        "server": "7a5daf6a.5df79",
+        "client": "",
+        "x": 824.0001220703125,
+        "y": 694.111328125,
+        "wires": []
+    },
+    {
+        "id": "40aabd4c.489af4",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "evt",
+        "deviceId": "iotdevice",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "1797B5-D143-4F90",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": "2",
+        "x": 204.00001525878906,
+        "y": 632,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "4524ef8d.dacf7",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "evt",
+        "deviceId": "iotdevice2",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "OA2895-64OB-DBLF",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": "2",
+        "x": 215.00001525878906,
+        "y": 683,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "f3106b2f.fa46d8",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "Set Response",
+        "func": "msg.payload = \"Device initialized Successfully\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 571,
+        "y": 221,
+        "wires": [
+            [
+                "17994247.76c7de"
+            ]
+        ]
+    },
+    {
+        "id": "e35fb55f.09fff8",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "5D5B6D-B3ED-4BE4",
+        "func": "var globalContext = context.global; \nif(globalContext.get('5D5B6D-B3ED-4BE4').SerialNo != globalContext.get('pasueDevice') ){\n    msg.payload = {\"d\":globalContext.get('5D5B6D-B3ED-4BE4')};\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 618,
+        "y": 667,
+        "wires": [
+            [
+                "b80cc682.607a08"
+            ]
+        ]
+    },
+    {
+        "id": "b80cc682.607a08",
+        "type": "ibmiot out",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "outputType": "evt",
+        "deviceId": "iotdevice3",
+        "deviceType": "IOTDevice",
+        "eventCommandType": "data",
+        "format": "json",
+        "data": "data",
+        "qos": "2",
+        "name": "5D5B6D-B3ED-4BE4",
+        "service": "registered",
+        "x": 915,
+        "y": 665,
+        "wires": []
+    },
+    {
+        "id": "f922ec89.0da66",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "F3386A-2FB4-4E7B",
+        "func": "var globalContext = context.global; \nif(globalContext.get('F3386A-2FB4-4E7B').SerialNo != globalContext.get('pasueDevice') ){\n    msg.payload = {\"d\":globalContext.get('F3386A-2FB4-4E7B')};\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 622,
+        "y": 734,
+        "wires": [
+            [
+                "201e9e48.6a1ad2"
+            ]
+        ]
+    },
+    {
+        "id": "201e9e48.6a1ad2",
+        "type": "ibmiot out",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "outputType": "evt",
+        "deviceId": "iotdevice4",
+        "deviceType": "IOTDevice",
+        "eventCommandType": "data",
+        "format": "json",
+        "data": "data",
+        "qos": "2",
+        "name": "F3386A-2FB4-4E7B",
+        "service": "registered",
+        "x": 919,
+        "y": 732,
+        "wires": []
+    },
+    {
+        "id": "48ef7348.31f31c",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "5AI0TO-FEN7-WY68",
+        "func": "var globalContext = context.global; \nif(globalContext.get('5AI0TO-FEN7-WY68').SerialNo != globalContext.get('pasueDevice') ){\n    msg.payload = {\"d\":globalContext.get('5AI0TO-FEN7-WY68')};\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 624,
+        "y": 806,
+        "wires": [
+            [
+                "e082d36e.b4b07"
+            ]
+        ]
+    },
+    {
+        "id": "e082d36e.b4b07",
+        "type": "ibmiot out",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "outputType": "evt",
+        "deviceId": "iotdevice5",
+        "deviceType": "IOTDevice",
+        "eventCommandType": "data",
+        "format": "json",
+        "data": "data",
+        "qos": "2",
+        "name": "5AI0TO-FEN7-WY68",
+        "service": "registered",
+        "x": 921,
+        "y": 804,
+        "wires": []
+    },
+    {
+        "id": "e6935f66.5b89d",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "FCD840-C37E-455D",
+        "func": "var globalContext = context.global; \nif(globalContext.get('FCD840-C37E-455D').SerialNo != globalContext.get('pasueDevice') ){\n    msg.payload = {\"d\":globalContext.get('FCD840-C37E-455D')};\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 628,
+        "y": 873,
+        "wires": [
+            [
+                "31be356e.7102ea"
+            ]
+        ]
+    },
+    {
+        "id": "31be356e.7102ea",
+        "type": "ibmiot out",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "outputType": "evt",
+        "deviceId": "iotdevice6",
+        "deviceType": "IOTDevice",
+        "eventCommandType": "data",
+        "format": "json",
+        "data": "data",
+        "qos": "2",
+        "name": "FCD840-C37E-455D",
+        "service": "registered",
+        "x": 916,
+        "y": 873,
+        "wires": []
+    },
+    {
+        "id": "2b4ab77.fbb9c48",
+        "type": "function",
+        "z": "f657b46d.c7ee58",
+        "name": "F3386A-2FB4-4E7B",
+        "func": "var globalContext = context.global; \nif(globalContext.get('F3386A-2FB4-4E7B').SerialNo != globalContext.get('pasueDevice') ){\n    msg.payload = {\"d\":globalContext.get('F3386A-2FB4-4E7B')};\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 632,
+        "y": 944,
+        "wires": [
+            [
+                "6ad2ba45.6283d4"
+            ]
+        ]
+    },
+    {
+        "id": "6ad2ba45.6283d4",
+        "type": "ibmiot out",
+        "z": "f657b46d.c7ee58",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "outputType": "evt",
+        "deviceId": "iotdevice7",
+        "deviceType": "IOTDevice",
+        "eventCommandType": "data",
+        "format": "json",
+        "data": "data",
+        "qos": "2",
+        "name": "F3386A-2FB4-4E7B",
+        "service": "registered",
+        "x": 919,
+        "y": 941,
+        "wires": []
+    },
+    {
+        "id": "c83a3192.b7577",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "evt",
+        "deviceId": "iotdevice3",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "5D5B6D-B3ED-4BE4",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": "2",
+        "x": 218.00001525878906,
+        "y": 786,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "166af35e.e7568d",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "evt",
+        "deviceId": "iotdevice4",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "F3386A-2FB4-4E7B",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": "2",
+        "x": 205.00001525878906,
+        "y": 837,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "9ae9a442.7e27a8",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "evt",
+        "deviceId": "iotdevice5",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "5AI0TO-FEN7-WY68",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": "2",
+        "x": 214.00001525878906,
+        "y": 888,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "77e4f1e6.a1769",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "evt",
+        "deviceId": "iotdevice6",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "FCD840-C37E-455D",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": "2",
+        "x": 218.00001525878906,
+        "y": 946,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "901128a3.4e3238",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "evt",
+        "deviceId": "iotdevice7",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "F3386A-2FB4-4E7B",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": "2",
+        "x": 208.00001525878906,
+        "y": 994,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "a4c1cdd.36f753",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "1797B5-D143-4F90",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 219,
+        "y": 111,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "76caa197.106f4",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice2",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "OA2895-64OB-DBLF",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 220,
+        "y": 162,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "59adafd4.8b746",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice3",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "5D5B6D-B3ED-4BE4",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 223,
+        "y": 265,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "c9cf874c.d40ee8",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice4",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "F3386A-2FB4-4E7B",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 220,
+        "y": 316,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "ad5fec82.9e5a8",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice5",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "5AI0TO-FEN7-WY68",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 219,
+        "y": 367,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "c6cab64a.ca6ab8",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice6",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "FCD840-C37E-455D",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 233,
+        "y": 425,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "ac329522.5a89c8",
+        "type": "ibmiot in",
+        "z": "244283f1.61aa5c",
+        "authentication": "apiKey",
+        "apiKey": "cf80494e.0c58a8",
+        "inputType": "cmd",
+        "deviceId": "iotdevice7",
+        "applicationId": "",
+        "deviceType": "IOTDevice",
+        "eventType": "data",
+        "commandType": "",
+        "format": "json",
+        "name": "F3386A-2FB4-4E7B",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allEvents": "",
+        "allCommands": true,
+        "allFormats": "",
+        "qos": "2",
+        "x": 223,
+        "y": 473,
+        "wires": [
+            [
+                "b34ffd5f.90933"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "text": "Dashboard",
+    "sref": "app.dashboard",
+    "icon": "icon-speedometer",
+    "translate": "sidebar.nav.DASHBOARD"
+  },
+  {
+    "text": "Configuration",
+    "sref": "app.configuration",
+    "icon": "fa fa-file-code-o",
+    "translate": "sidebar.nav.CONFIGURATION"
+  }
+]

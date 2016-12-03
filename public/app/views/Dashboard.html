@@ -1,0 +1,249 @@
+<style>
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #DFDEDE;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+.popup1 {
+	margin-left: 36%;
+    margin-top: 5%;
+    width: 28%;
+	
+	}
+	.contPopup {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.2);
+		
+	}
+	
+	
+.tabledata tr.border_bottom td {
+  border-bottom:1pt solid #D1D1D1;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tabledata {
+color: black;
+font-size: 15px;
+width: 100%;
+ } 
+ 
+.closetab {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #6DB5F2;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.closetab:hover,
+.closetab:focus {
+  color: #6DB5F2;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+button.closetab {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+.visibilityMyClass {
+       visibility: hidden
+    }
+
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+.body {  }
+.loader { font-weight: bold; width: 80%; margin: 0 auto; height: 20px; font-family: 'Josefin Sans', sans-serif; }
+.title { color: #CC0066; font-size: 10px; margin-bottom: 5px }
+.load { width: 100%; height: 5px; background-color: #F0F0F0; position: relative; overflow: hidden; }
+.bar { width: 15%; height: 5px; background-color: #CC0066; position: absolute;
+} 
+
+
+.maxwidthheight{
+    width: 100%;
+    height: 100%;
+}
+
+.boldcolor{
+color: black;
+font-weight: bold;
+
+}
+
+
+
+</style>
+
+<center>
+<!-- col-md-4 col-sm-4 -->
+<div class="row" style="max-width: 1200px;      margin-top: 8px;" >
+    <div class="col-sm-6 "   ng-repeat="Device in Devices" style="padding-bottom: 80px;" >
+      <!-- START panel-->
+      <div id="panelDemo10" class="panel panel-info" ng-attr-id="{{Device.Name}}" >
+         <div class="panel-heading"><b style="font-size: 18px;">{{Device.Name}}</b><button  type="button" class="closetab" style="position: relative;padding-right: 8px;"  data-dismiss="modal">&times;</button></div>
+         <div class="panel-body" style="    max-height: 440px;" >
+         
+         
+         <center>
+         <table>
+         
+         <tr>
+         <td style="width: 50%;">
+         <center>
+         <p style="color: #337AB7;font-size: 15px; font-weight: bolder;">Temperature Guage</p>
+         <hr style="width: 80%;">
+            <div  style="width:180px; height:130px" ng-attr-id="{{Device.Name+'tempgauge'}}" ></div>
+          </center>
+          </td>
+          <td style="width: 50%;">
+          <center>
+            <p style="color: #337AB7;font-size: 15px; font-weight: bolder;">Water usage Guage</p>
+            <hr style="    width: 80%;">
+           <!-- style="width:280px; height:200px"  -->
+             <div style="width:180px; height:130px" ng-attr-id="{{Device.Name+'watergauge'}}" ></div>
+             </center>
+             <td>
+             </tr>
+             </table>
+             </center>
+             <!--  -->
+             
+            <br>
+            
+        <center>
+         <table>
+         <tr>
+         <td><img  src="app/img/Washing-Machine.jpg" style="width: 50%;margin-left: 55px"></td>
+         <td><table class="table">
+                  <thead>
+                     <tr>
+                      
+                        <th style="color: black;"><b>Name</b></th>
+                        <th>{{Device.Data.name}}</th>
+                        
+                     </tr>
+                  </thead> 
+                  <tbody>
+                    
+                      <tr>
+                       
+                        <td class="boldcolor">Model</td>
+                        <td>{{Device.Data.Model}}</td>
+                     </tr>
+                      <tr>
+                       
+                        
+                        <td class="boldcolor">Firmware</td>
+                        <td >{{Device.Data.firmware}}</td>
+                    
+                     </tr>
+                      <tr>
+                       
+                        <td class="boldcolor">Mode</td>
+                        <td>Low flow washer mode</td>
+                     </tr>
+                  </tbody>
+               </table></td>
+         </tr>
+         
+         </table>
+        
+       <!--  <table class="tabledata" >
+        <tr class="border_bottom"><td style="text-align: right;  width: 45%;"> Name</td><td style="width: 10%"></td><td style="text-align: left; width: 45%;">{{Device.Data.name}}</td></tr>
+        <tr class="border_bottom"><td style="text-align: right;"> Model</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.Model}}</td></tr>
+        <tr class="border_bottom"><td style="text-align: right;"> Firmware</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.firmware}}</td></tr>
+         <tr class="border_bottom"><td style="text-align: right;"> Mode</td><td style="width: 10%"></td><td style="text-align: left;">Low flow washer mode</td></tr>
+        </table> -->
+        
+      </center>
+            
+            
+            <br>
+            <br>
+            <br>
+         </div>
+         <div class="panel-footer" style="background-color: #EDECEC; font-size: 12px;"><!-- Washing machine data <b style="color: black;">[40]</b> <span style="cursor: pointer; " ng-click="selectWashingmachine($index)" ><em class="fa fa-ellipsis-v  fa-2x " style=" float: right; color: #5D5D5D"></em></span> --></div>
+      </div>
+      <!-- END panel Device.DisplayUpgrading-->
+      <div   ng-class="{'visibilityMyClass': !Device.DisplayUpgrading}" style=" margin-top: -80px; opacity: 1;">
+            <!--  <font style="font-size: 20px;">Upgrading</font><img src="app/img/ellipsis.gif"/> -->
+             
+             	<div class="loader">
+				 <center> <div class="title" style="opacity: 1;">Upgrading...</div></center>
+				  <div class="load">
+				    <div class="bar"></div>
+				  </div>
+				</div>
+             </div>
+   </div>
+ 
+</div>
+</center>
+
+	<!-- <div class="contPopup" ng-show="showpopup">
+   	<div class="popup1">
+		<div class="darkText popupMsgPadding row">
+      <div class="modal-content" style="overflow: auto;">
+       <button ng-click ="showpopup=false" type="button" class="close" style="position: relative;padding-right: 19px;padding-top: 10px;"  data-dismiss="modal">&times;</button>
+      	<form name="myForm">
+      
+      	
+        <div class="modal-header" style="font-size:20px; background-color:#337AB7 ;color: white;">
+          <div class="brand-logo"> #337AB7
+            <b>{{data.Name}}</b>
+        </div>
+        </div>
+        <div class="modal-body">
+        
+            
+        <center>
+        <table class="tabledata" >
+        <tr class="border_bottom"><td style="text-align: right;  width: 45%;"> Name</td><td style="width: 10%"></td><td style="text-align: left; width: 45%;">{{Device.Data.name}}</td></tr>
+        <tr class="border_bottom"><td style="text-align: right;"> Model</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.Model}}</td></tr>
+        <tr class="border_bottom"><td style="text-align: right;"> Current Cycle</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.currentCycle}}</td></tr>
+        <tr class="border_bottom"><td style="text-align: right;"> Firmware</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.firmware}}</td></tr>
+         <tr class="border_bottom"><td style="text-align: right;"> Mode</td><td style="width: 10%"></td><td style="text-align: left;">Low flow washer mode</td></tr>
+        
+        
+        
+        <tr class="border_bottom"><td style="text-align: right;"> Load Size</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.LoadSize}}</td></tr>
+        <tr class="border_bottom"><td style="text-align: right;"> Load Weight</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.LoadWeight}}</td></tr>
+        <tr class="border_bottom"><td style="text-align: right;"> Power Usage</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.PowerUsage}}</td></tr>
+        <tr class="border_bottom"><td style="text-align: right;"> Serial No</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.SerialNo}}</td></tr>
+        <tr class="border_bottom"><td style="text-align: right;"> SKU</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.SKU}}</td></tr>
+        
+        </table>
+        
+      </center>
+
+        </div>
+        </form>
+      </div>
+		</div>
+	</div>
+   	</div> -->
+
+
+
