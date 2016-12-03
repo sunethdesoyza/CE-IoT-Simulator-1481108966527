@@ -702,7 +702,7 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
             
         };
 			
-        ws.onclose = function()
+        ws.onclose = function(e)
         { 
            // websocket is closed.
            //alert("Connection is closed..."); 
