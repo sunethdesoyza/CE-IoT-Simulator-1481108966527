@@ -7050,7 +7050,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .content-wrapper {
-    padding: 20px;
+    padding: 0px;
   }
   .content-wrapper > h3,
   .content-wrapper > .content-heading {

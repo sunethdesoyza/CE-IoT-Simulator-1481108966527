@@ -41,8 +41,8 @@ width: 100%;
  
 .closetab {
   float: right;
-  font-size: 21px;
-  font-weight: bold;
+   font-size: 40px;
+  font-weight: 100;
   line-height: 1;
   color: #6DB5F2;
   text-shadow: 0 1px 0 #ffffff;
@@ -75,7 +75,7 @@ button.closetab {
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
 .body {  }
 .loader { font-weight: bold; width: 80%; margin: 0 auto; height: 20px; font-family: 'Josefin Sans', sans-serif; }
-.title { color: #CC0066; font-size: 10px; margin-bottom: 5px }
+.title { color: #CC0066; font-size: 20px; margin-bottom: 5px }
 .load { width: 100%; height: 5px; background-color: #F0F0F0; position: relative; overflow: hidden; }
 .bar { width: 15%; height: 5px; background-color: #CC0066; position: absolute;
 } 
@@ -91,19 +91,113 @@ color: black;
 font-weight: bold;
 
 }
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
 
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100000; /* Sit on top */
+    padding-top: 150px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow:hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+/* Modal Content */
+.modal-content {
+	max-width:450px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.closetab {
+  float: right;
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 1;
+  color: #2E6392;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.closetab:hover,
+.closetab:focus {
+  color: #2E6392;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+button.closetab {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #347AB8;
+    color: white;
+    font-family: inherit;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
 </style>
 
 <center>
 <!-- col-md-4 col-sm-4 -->
-<div class="row" style="max-width: 1200px;      margin-top: 8px;" >
-    <div class="col-sm-6 "   ng-repeat="Device in Devices" style="padding-bottom: 80px;" >
+
+<div class="row row-centered" style="     margin-top: 38px;" >
+    <div class="col-sm-6 col-md-4 col-centered"   ng-repeat="Device in Devices"  style="padding-bottom: 70px; min-width: 410px;" >
       <!-- START panel-->
-      <div id="panelDemo10" class="panel panel-info" ng-attr-id="{{Device.Name}}" >
-         <div class="panel-heading"><b style="font-size: 18px;">{{Device.Name}}</b><button  type="button" class="closetab" style="position: relative;padding-right: 8px;"  data-dismiss="modal">&times;</button></div>
-         <div class="panel-body" style="    max-height: 440px;" >
+      <div id="panelDemo10" class="panel panel-info" ng-attr-id="{{Device.Name}}"  >
+         <div class="panel-heading"><b style="font-size: 22px;">{{Device.Name}}</b><button  type="button" class="closetab" style="position: relative;padding-right: 8px;  margin-top: -8px;"  data-dismiss="modal">&times;</button></div>
+         <div class="panel-body" style="    height: 485px; " >
          
          
          <center>
@@ -112,14 +206,14 @@ font-weight: bold;
          <tr>
          <td style="width: 50%;">
          <center>
-         <p style="color: #337AB7;font-size: 15px; font-weight: bolder;">Temperature Guage</p>
+         <p style="color: #337AB7;font-size: 18px; font-weight: 900;"><B>Temperature Guage</B></p>
          <hr style="width: 80%;">
             <div  style="width:180px; height:130px" ng-attr-id="{{Device.Name+'tempgauge'}}" ></div>
           </center>
           </td>
           <td style="width: 50%;">
           <center>
-            <p style="color: #337AB7;font-size: 15px; font-weight: bolder;">Water usage Guage</p>
+            <p style="color: #337AB7;font-size: 18px; font-weight: 900;">Water usage Guage</p>
             <hr style="    width: 80%;">
            <!-- style="width:280px; height:200px"  -->
              <div style="width:180px; height:130px" ng-attr-id="{{Device.Name+'watergauge'}}" ></div>
@@ -135,17 +229,17 @@ font-weight: bold;
         <center>
          <table>
          <tr>
-         <td><img  src="app/img/Washing-Machine.jpg" style="width: 50%;margin-left: 55px"></td>
-         <td><table class="table">
+         <td><center><img  src="app/img/Washing-Machine.jpg" style="width: 75%;"></center></td>
+         <td><table class="table" style="font-weight: bolder; font-size: 18px">
                   <thead>
                      <tr>
                       
                         <th style="color: black;"><b>Name</b></th>
-                        <th>{{Device.Data.name}}</th>
+                        <th style="color: #656565">{{Device.Data.name}}</th>
                         
                      </tr>
                   </thead> 
-                  <tbody>
+                  <tbody style="color: #656565">
                     
                       <tr>
                        
@@ -170,12 +264,7 @@ font-weight: bold;
          
          </table>
         
-       <!--  <table class="tabledata" >
-        <tr class="border_bottom"><td style="text-align: right;  width: 45%;"> Name</td><td style="width: 10%"></td><td style="text-align: left; width: 45%;">{{Device.Data.name}}</td></tr>
-        <tr class="border_bottom"><td style="text-align: right;"> Model</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.Model}}</td></tr>
-        <tr class="border_bottom"><td style="text-align: right;"> Firmware</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.firmware}}</td></tr>
-         <tr class="border_bottom"><td style="text-align: right;"> Mode</td><td style="width: 10%"></td><td style="text-align: left;">Low flow washer mode</td></tr>
-        </table> -->
+  
         
       </center>
             
@@ -191,7 +280,7 @@ font-weight: bold;
             <!--  <font style="font-size: 20px;">Upgrading</font><img src="app/img/ellipsis.gif"/> -->
              
              	<div class="loader">
-				 <center> <div class="title" style="opacity: 1;">Upgrading...</div></center>
+				 <center> <div class="title" style="opacity: 1; z-index: 4">Upgrading...</div></center>
 				  <div class="load">
 				    <div class="bar"></div>
 				  </div>
@@ -202,48 +291,25 @@ font-weight: bold;
 </div>
 </center>
 
-	<!-- <div class="contPopup" ng-show="showpopup">
-   	<div class="popup1">
-		<div class="darkText popupMsgPadding row">
-      <div class="modal-content" style="overflow: auto;">
-       <button ng-click ="showpopup=false" type="button" class="close" style="position: relative;padding-right: 19px;padding-top: 10px;"  data-dismiss="modal">&times;</button>
-      	<form name="myForm">
-      
-      	
-        <div class="modal-header" style="font-size:20px; background-color:#337AB7 ;color: white;">
-          <div class="brand-logo"> #337AB7
-            <b>{{data.Name}}</b>
-        </div>
-        </div>
-        <div class="modal-body">
-        
-            
-        <center>
-        <table class="tabledata" >
-        <tr class="border_bottom"><td style="text-align: right;  width: 45%;"> Name</td><td style="width: 10%"></td><td style="text-align: left; width: 45%;">{{Device.Data.name}}</td></tr>
-        <tr class="border_bottom"><td style="text-align: right;"> Model</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.Model}}</td></tr>
-        <tr class="border_bottom"><td style="text-align: right;"> Current Cycle</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.currentCycle}}</td></tr>
-        <tr class="border_bottom"><td style="text-align: right;"> Firmware</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.firmware}}</td></tr>
-         <tr class="border_bottom"><td style="text-align: right;"> Mode</td><td style="width: 10%"></td><td style="text-align: left;">Low flow washer mode</td></tr>
-        
-        
-        
-        <tr class="border_bottom"><td style="text-align: right;"> Load Size</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.LoadSize}}</td></tr>
-        <tr class="border_bottom"><td style="text-align: right;"> Load Weight</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.LoadWeight}}</td></tr>
-        <tr class="border_bottom"><td style="text-align: right;"> Power Usage</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.PowerUsage}}</td></tr>
-        <tr class="border_bottom"><td style="text-align: right;"> Serial No</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.SerialNo}}</td></tr>
-        <tr class="border_bottom"><td style="text-align: right;"> SKU</td><td style="width: 10%"></td><td style="text-align: left;">{{Device.Data.SKU}}</td></tr>
-        
-        </table>
-        
-      </center>
+	
+  <!-- The Modal -->
+<div id="myModal" class="modal">
 
-        </div>
-        </form>
-      </div>
-		</div>
-	</div>
-   	</div> -->
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button  type="button" class="closetab" ng-click="closepopup()" style="position: relative;padding: 10px;margin-top: -8px;">&times;</button>
+      <h2 style="margin-top: 10px;font-size: 22px;font-weight: 100; ">Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+   <!--  <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div> -->
+  </div>
 
+</div>
 
 

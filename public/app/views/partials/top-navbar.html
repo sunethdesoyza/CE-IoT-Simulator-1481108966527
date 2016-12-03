@@ -1,11 +1,13 @@
+
+
 <!-- START Top Navbar-->
 <nav role="navigation" class="navbar topnavbar" ng-controller="NavbarController">
    <!-- START navbar header-->
    <div class="navbar-header" style="min-width: 420px;color: white;margin-top: -5px;margin-right: 10px;margin-left: 10px;">
     
  
-     	<img alt="" style="float: left;    margin-top: 10px; margin-right: 5px; margin-left: 5px;" src="app/img/PSL-logo.png">
-		<h3 style="padding-left: 20px;padding-right: 20px;">Washing Machine Simulator</h3>
+     	<img alt="" style="float: left;    margin-top: 10px; margin-right: 5px; margin-left: 5px;margin-bottom: 10px;" src="app/img/PSL-logo.png">
+		<h3 style="padding-left: 20px;padding-right: 20px; text-align: center;">Washing Machine Simulator</h3>
 		
 
    </div>
@@ -14,22 +16,26 @@
       
       	<ul class="nav navbar-nav pull-right">
       	<li>
-      	<input type="image" src="app/img/restart-icon.png" style="  margin-top: 17px;position: relative;margin-right: 16px;" ng-click="restartsimulation()" alt="Submit" >
+      	<input type="image" src="app/img/restart-icon.png" style="  margin-top: 17px;position: relative;margin-right: 16px;" ng-click="openpopup()" alt="Submit" >
       	</li>
       	<li>
-      	<div class="vertical-line" style="    margin-right: 20px;" />
+      	<input type="image" src="app/img/restart-icon.png" style="  margin-top: 17px;position: relative;margin-right: 16px;" ng-click="restartsimulation()" alt="Submit" >
       	</li>
-        <li style="color: white; width: 250px;">
+      	
+      	<!-- <li>
+      	<div class="vertical-line" style="    margin-right: 20px;" />
+      	</li> -->
+        <!-- <li style="color: white; width: 250px;">
         <div href="#" class="media-box p mt0 __web-inspector-hide-shortcut__" >
          <span class="pull-right">
-            <!-- <span class="circle circle-success circle-lg"></span> -->
+            <span class="circle circle-success circle-lg"></span>
              <span ><em class="fa fa-angle-down fa-2x" style="    margin-right: 34px;     margin-top: 8px;"></em></span>
          </span>
          <span class="pull-left">
-            <!-- Contact avatar-->
+            Contact avatar
             <img src="app/img/user/02.jpg" alt="Image" class="media-box-object img-circle thumb48">
          </span>
-         <!-- Contact info-->
+         Contact info
          <span class="media-box-body">
             <span class="media-box-heading">
                <strong>Mark Foster</strong>
@@ -42,7 +48,7 @@
             
            
            
-         </li>
+         </li> -->
 
          
         </ul>
@@ -54,4 +60,10 @@
  
    </div>
    
+   
+   
+   
+ 
+
+
 </nav>

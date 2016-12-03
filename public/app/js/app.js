@@ -10,7 +10,8 @@
 
 if (typeof $ === 'undefined') { throw new Error('This application\'s JavaScript requires jQuery'); }
 
-
+//var PythonEndpoint="http://pythonmiddleware.eu-gb.mybluemix.net/"
+//var PythonEndpoint="http://localhost:5050/"
 
 // APP START
 // ----------------------------------- 
@@ -333,13 +334,50 @@ App.filter('capitalize', function() {
 App.controller('NavbarController', ['$scope', '$http', '$state','$timeout','$rootScope','$location', function($scope, $http, $state,$timeout,$rootScope,$location) {
 	console.log("NavbarController called");
 
-	 
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	$scope.openpopup=function(){
+		
+		console.log("Inside Navbar contoller open command");
+		//window.scrollTo(0,0);
+		 modal.style.display = "block";
+		 
+		 disableScroll();
+	}
+	var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+	function preventDefault(e) {
+	  e = e || window.event;
+	  if (e.preventDefault)
+	      e.preventDefault();
+	  e.returnValue = false;  
+	}
+
+	function preventDefaultForScrollKeys(e) {
+	    if (keys[e.keyCode]) {
+	        preventDefault(e);
+	        return false;
+	    }
+	}
+
+	function disableScroll() {
+		  if (window.addEventListener) // older FF
+		      window.addEventListener('DOMMouseScroll', preventDefault, false);
+		  window.onwheel = preventDefault; // modern standard
+		  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+		  window.ontouchmove  = preventDefault; // mobile
+		  document.onkeydown  = preventDefaultForScrollKeys;
+		}
+	
+	
+	
 	 $scope.restartsimulation =function(){
 		 console.log("Restarting the Simulator");
 		 
 		 swal({
 			 title: "Are you sure?",
-			  text: "You want to Factory reset washing machine simulator!",
+			  text: "This will reset you device to factory values!",
 			  type: "info",
 			  showCancelButton: true,
 			  closeOnConfirm: false,
@@ -378,7 +416,49 @@ App.controller('NavbarController', ['$scope', '$http', '$state','$timeout','$roo
 App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$rootScope','$location', function($scope, $http, $state,$timeout,$rootScope,$location) {
 	console.log("Dashboard called");
 	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	        enableScroll();
+	    }
+	}
+	 
 	
+	$scope.closepopup=function(){
+		
+		modal.style.display = "none";
+		enableScroll();
+	}
+	
+	var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+	function preventDefault(e) {
+	  e = e || window.event;
+	  if (e.preventDefault)
+	      e.preventDefault();
+	  e.returnValue = false;  
+	}
+
+	function preventDefaultForScrollKeys(e) {
+	    if (keys[e.keyCode]) {
+	        preventDefault(e);
+	        return false;
+	    }
+	}
+	
+	
+
+		function enableScroll() {
+		    if (window.removeEventListener)
+		        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+		    window.onmousewheel = document.onmousewheel = null; 
+		    window.onwheel = null; 
+		    window.ontouchmove = null;  
+		    document.onkeydown = null;  
+		}
 	$scope.Devices=[];
 	//$scope.showpopup=true;
 	var Wisconsintempgauge=null;
@@ -389,7 +469,7 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 
 		  function rotate(selector)
 		  {
-			  console.log("finction called");
+			  //console.log("finction called");
 			  
 		    $(selector).animate( { left: $('.load').width() }, 1500, function(){
 		    	
@@ -410,48 +490,41 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 		
 	 }
 	 
-	  $scope.$watch('Devices.length', function (newValue, oldValue) {
+	 $scope.$watch('Devices.length', function (newValue, oldValue) {
 			
 			
 			if(newValue==2){
 				console.log(newValue);
+				console.log($scope.Devices[1].Data.temperature);
+
+				
+			
 				
 				window.setTimeout(function(){
-					Wisconsintempgauge = new JustGage({
-					    id: "Wisconsintempgauge",
-					    value: 2,
-					    min: 0,
-					    max: 25,
-					    titlePosition: "below",
-					    humanFriendly: true
-					  });
-				  Wisconsinwatergauge = new JustGage({
-					    id: "Wisconsinwatergauge",
-					    value: 50,
-					    min: 10,
-					    max: 65,
-					    titlePosition: "below",
-					    humanFriendly: true
-					  });
-				Washingtontempgauge = new JustGage({
-					    id: "Washingtontempgauge",
-					    value: 6,
-					    min: 0,
-					    max: 25,
-					    titlePosition: "below",
-					    humanFriendly: true
-					  });
-				   Washingtonwatergauge = new JustGage({
-					    id: "Washingtonwatergauge",
-					    value: 47,
-					    min: 10,
-					    max: 65,
-					    titlePosition: "below",
-					    humanFriendly: true
-					  });
+					
+					
+					/*for(var i = 0; i < $scope.Devices.length; i++) {
+						$scope.Devices[i].TemperatureGuage =new JustGage({
+						    id: $scope.Devices[i].Name+"tempgauge",
+						    value: $scope.Devices[i].Data.temperature,
+						    min: 0,
+						    max: 25,
+						    titlePosition: "below",
+						    humanFriendly: true
+						  });
+							
+						$scope.Devices[i].WaterGuage = new JustGage({
+						    id: $scope.Devices[i].Name+"watergauge",
+						    value: $scope.Devices[i].Data.WaterUsage,
+						    min: 10,
+						    max: 70,
+						    titlePosition: "below",
+						    humanFriendly: true
+						  });
+		      		}*/
 				   
 				   rotate('.bar');
-				}, 100);
+				}, 200);
 				
 				
 			}
@@ -481,191 +554,147 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
            var received_msg = evt.data;
            
           
-          
-           if (!('d' in JSON.parse(received_msg))){
+           
+           var iscommand=false;
+           
+           if(!('d' in JSON.parse(received_msg))){
         	   
-        	   
-        	   if(JSON.parse(received_msg).SerialNo == "1797B5-D143-4F90"){
-        		  
-					console.log("Comparing the firmware");
-					console.log("Current firmware version" + $scope.Devices[0].Data.firmware);
-					console.log("Upgrade firmware version to" + JSON.parse(received_msg).firmware);
-        		   if($scope.Devices[0].Data.firmware.match(/\d+/)[0] < JSON.parse(received_msg).firmware.match(/\d+/)[0]){
-					   console.log("Currrent version is lower that expected hence upgrading");
-				   
-        		   $http({ 
- 					  method: 'GET',
- 					  url: 'http://'+$location.host()+':'+$location.port()+'/PauseWisconsin'
- 					}).then(function successCallback(response) {
- 					    // this callback will be called asynchronously
- 					    // when the response is available
- 						
- 						 $("#Wisconsin").addClass("disabledbutton");
- 						 
- 		        		   console.log("Firmware update command Wisconsin");
- 		        		  $scope.Devices[0].DisplayUpgrading=true;
- 						  setTimeout(function(){
- 							  
- 							 $http({ 
- 								  method: 'GET',
- 								  url: 'http://'+$location.host()+':'+$location.port()+'/UpdateFirmwareWisconsin'
- 								}).then(function successCallback(response) {
- 								    // this callback will be called asynchronously
- 								    // when the response is available
- 									$scope.Devices[0].DisplayUpgrading=false;
- 									$("#Wisconsin").removeClass("disabledbutton");
- 									
- 								  }, function errorCallback(response) {
- 									 
- 								    // called asynchronously if an error occurs
- 								    // or server returns response with an error status.
- 								  });
- 		        			  
- 		        			   
- 		        			   
- 		        			   
- 		        			  }, 10000);
- 						
- 					  }, function errorCallback(response) {
- 						 
- 					    // called asynchronously if an error occurs
- 					    // or server returns response with an error status.
- 					  });
-        		   
-        		   }
-        		   
-        		 
-        		   
-        	   }
-        	   
-        	   if(JSON.parse(received_msg).SerialNo == "OA2895-64OB-DBLF"){
-        		   
-				   	console.log("Comparing the firmware");
-					console.log("Current firmware version" + $scope.Devices[1].Data.firmware);
-					console.log("Upgrade firmware version to" + JSON.parse(received_msg).firmware);
-				   
-				    if($scope.Devices[1].Data.firmware.match(/\d+/)[0]<JSON.parse(received_msg).firmware.match(/\d+/)[0]){
-					   
-				      console.log("Currrent version is lower that expected hence upgrading");
-        		   $http({ 
-  					  method: 'GET',
-  					  url: 'http://'+$location.host()+':'+$location.port()+'/PauseWashington'
-  					}).then(function successCallback(response) {
-  					    // this callback will be called asynchronously
-  					    // when the response is available
-  					  $("#Washington").addClass("disabledbutton");
-  					  
-  					  
-  					$scope.Devices[1].DisplayUpgrading=true;
-  					  
-  	        		   console.log("Firmware update command Washington");
-  	        		   setTimeout(function(){
-  	        			   
-  	        			 $http({ 
-							  method: 'GET',
-							  url: 'http://'+$location.host()+':'+$location.port()+'/UpdateFirmwareWashington'
-							}).then(function successCallback(response) {
-							    // this callback will be called asynchronously
-							    // when the response is available
-								$scope.Devices[1].DisplayUpgrading=false;
-								   $("#Washington").removeClass("disabledbutton");
-								
-							  }, function errorCallback(response) {
-								 
-							    // called asynchronously if an error occurs
-							    // or server returns response with an error status.
-							  });
-	        			  
-  	        		
-  	        			  }, 10000);
-  						
-  					  }, function errorCallback(response) {
-  						 
-  					    // called asynchronously if an error occurs
-  					    // or server returns response with an error status.
-  					  });
-					}
-        		 
-        	   }
-        	   
+        	   var serialNumber = JSON.parse(received_msg).SerialNo;
+        	   iscommand=true;
         	   
            }else{
-           
-   		//console.log("function called");
-   	   if(JSON.parse(received_msg).d.SerialNo == "1797B5-D143-4F90"){
-   	        	   
-   	        	   //console.log("1797B5-D143-4F90");  
-   		var found = false;
-   		for(var i = 0; i < $scope.Devices.length; i++) {
-   		    if ($scope.Devices[i].Name == 'Wisconsin') {
-   		        found = true;
-   		        break;
-   		    }
-   		}
-   		if(found){
-   		 $scope.Devices[0].Data=JSON.parse(received_msg).d;
-   		 
-   		if (Wisconsintempgauge === undefined && Wisconsintempgauge === null) {
-   			
-   		}else{
-   			Wisconsintempgauge.refresh(JSON.parse(received_msg).d.temperature);
-   			
-   		}
-if (Wisconsinwatergauge === undefined && Wisconsinwatergauge === null) {
-   			
-   		}else{
-   			Wisconsinwatergauge.refresh(JSON.parse(received_msg).d.WaterUsage);
-   			
-   		}
-   		
-   		
-   		 
-   		 
-   		}else{
-   		  $scope.Devices[0]={"Data":JSON.parse(received_msg).d,"Name":"Wisconsin","DisplayUpgrading":false}
-   		  
-   		  
-   		}
-   	        	 
-   	           }
-   	           if(JSON.parse(received_msg).d.SerialNo == "OA2895-64OB-DBLF"){
-   		        	   
-   	        	   //console.log("OA2895-64OB-DBLF");  
-   	        	 
-   	        	 
-   	        	var found = false;
-   	     		for(var i = 0; i < $scope.Devices.length; i++) {
-   	     		    if ($scope.Devices[i].Name == 'Washington') {
-   	     		        found = true;
-   	     		        break;
-   	     		    }
-   	     		}
-   	     		if(found){
-   	     		 $scope.Devices[1].Data=JSON.parse(received_msg).d;
-   	     		 
-   	     		if (Washingtontempgauge === undefined && Washingtontempgauge === null) {
-   	    			
-   	    		}else{
-   	    			
-   	    			Washingtontempgauge.refresh(JSON.parse(received_msg).d.temperature);
-   	    		}
-   	 if (Washingtonwatergauge === undefined && Washingtonwatergauge === null) {
-   	    			
-   	    		}else{
-   	    			
-   	    			Washingtonwatergauge.refresh(JSON.parse(received_msg).d.WaterUsage);
-   	    		}
-   	     		}else{
-   	     		$scope.Devices[1]={"Data":JSON.parse(received_msg).d,"Name":"Washington","DisplayUpgrading":false}
-   	     		}
-   	     	       
-   		       }
-   	           	
-   	        
-   	        
+        	   
+        	   var serialNumber = JSON.parse(received_msg).d.SerialNo;
+        	   iscommand=false;
+        	   
            }
+
+           //console.log(serialNumber);
+                  
+           var index = null;
+      		for(var i = 0; i < $scope.Devices.length; i++) {
+      		    if ($scope.Devices[i].Data.SerialNo == serialNumber) {
+      		    	index=i
+      		        break;
+      		    }
+      		}
+           
+      		
+      		if (index  != null){
+      			//console.log("Device Was Found ");
+      			
+      			if(iscommand){
+      				//console.log("Comparing the firmware");
+					//console.log("Current firmware version" + $scope.Devices[index].Data.firmware);
+					//console.log("Upgrade firmware version to" + JSON.parse(received_msg).firmware);
+					 if($scope.Devices[index].Data.firmware.match(/\d+/)[0] < JSON.parse(received_msg).firmware.match(/\d+/)[0]){
+						 
+						   //console.log("Currrent version is lower that expected hence upgrading");
+						   $http({ 
+			 					  method: 'GET',
+			 					  url: 'http://'+$location.host()+':'+$location.port()+'/Pause?Serial='+$scope.Devices[index].Data.SerialNo
+			 					}).then(function successCallback(response) {
+			 					    // this callback will be called asynchronously
+			 					    // when the response is available
+			 						
+			 						 
+			 							 $('html, body').animate({scrollTop: $("#"+$scope.Devices[index].Data.Region).offset().top -80 }, 'slow');
+			 			                   
+			 			              
+			 						 $("#"+$scope.Devices[index].Data.Region).addClass("disabledbutton");
+			 						 
+			 		        		   //console.log("Firmware update command "+ $scope.Devices[index].Data.Region);
+			 		        		  $scope.Devices[index].DisplayUpgrading=true;
+			 						  setTimeout(function(){
+			 							  
+			 							 $http({ 
+			 								  method: 'GET',
+			 								  url: 'http://'+$location.host()+':'+$location.port()+'/UpdateFirmware?Serial='+$scope.Devices[index].Data.SerialNo
+			 								}).then(function successCallback(response) {
+			 								    // this callback will be called asynchronously
+			 								    // when the response is available
+			 									$scope.Devices[index].DisplayUpgrading=false;
+			 									$("#"+$scope.Devices[index].Data.Region).removeClass("disabledbutton");
+			 									
+			 								  }, function errorCallback(response) {
+			 									 
+			 								    // called asynchronously if an error occurs
+			 								    // or server returns response with an error status.
+			 								  });
+			 		        			   
+			 		        			  }, 10000);
+			 						
+			 					  }, function errorCallback(response) {
+			 						 
+			 					    // called asynchronously if an error occurs
+			 					    // or server returns response with an error status.
+			 					  });
+			        		   
+			        		   
+					 }else{
+						 
+						 
+						 sweetAlert("Firmware upgrade aborted", "Device at "+$scope.Devices[index].Name+" already upgraded to the latest firmware version", "error");
+					 }
+      				
+      			}else{
+      				$scope.Devices[index].Data=JSON.parse(received_msg).d;
+          			if ($scope.Devices[index].TemperatureGuage != null) {
+          				$scope.Devices[index].TemperatureGuage.refresh(JSON.parse(received_msg).d.temperature);
+          	   		}
+          			if ($scope.Devices[index].WaterGuage != null) {
+          				$scope.Devices[index].WaterGuage.refresh(JSON.parse(received_msg).d.WaterUsage);
+          	   		}	
+      			}
+      			
+      			
+      			
+      		}
+      		else {
+      			console.log("Device Was Not Found");
+      			 $scope.Devices.push({
+      				 "Data":JSON.parse(received_msg).d,
+      				 "Name":JSON.parse(received_msg).d.Region,
+      				 "DisplayUpgrading":false,
+      				 "TemperatureGuage":null,
+      				 "WaterGuage":null
+      			 });
+      			 
+      			 window.setTimeout(function(){
+					
+					
+					for(var i = 0; i < $scope.Devices.length; i++) {
+						
+						if($scope.Devices[i].Data.SerialNo == JSON.parse(received_msg).d.SerialNo){
+							$scope.Devices[i].TemperatureGuage =new JustGage({
+							    id: $scope.Devices[i].Name+"tempgauge",
+							    value: $scope.Devices[i].Data.temperature,
+							    min: 0,
+							    max: 25,
+							    titlePosition: "below",
+							    humanFriendly: true
+							  });
+								
+							$scope.Devices[i].WaterGuage = new JustGage({
+							    id: $scope.Devices[i].Name+"watergauge",
+							    value: $scope.Devices[i].Data.WaterUsage,
+							    min: 10,
+							    max: 70,
+							    titlePosition: "below",
+							    humanFriendly: true
+							  });
+						}
+						
+						
+						
+		      		}
+				   
+				  
+				}, 100);
+      		}
+         
            $scope.$apply(); 
-   	        
+            
         };
 			
         ws.onclose = function()
@@ -945,6 +974,8 @@ App.controller('SidebarController', ['$rootScope', '$scope', '$state', '$http', 
     }
 
 }]);
+
+
 
 /**=========================================================
  * Module: navbar-search.js
