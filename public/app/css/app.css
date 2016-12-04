@@ -98,6 +98,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: none;
 }
 body {
   margin: 0;
@@ -17194,4 +17195,15 @@ a:hover { text-decoration: none; color:blue; }
 a:focus { text-decoration: none; color:white; }
 a:hover, a:active { text-decoration: none; color:white }
 
-#my { border: none; border-bottom: 1px solid #B6DEEA;  margin-right: 15px; width: 85px;}​
+#my { border: none; border-bottom: 1px solid #B6DEEA;  margin-right: 15px; width: 85px;}
+
+ ::-webkit-scrollbar {
+    width: 0px;  remove scrollbar space
+    background: transparent;  optional: just make scrollbar invisible
+}
+optional: show position indicator in red
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+} 
+
+​

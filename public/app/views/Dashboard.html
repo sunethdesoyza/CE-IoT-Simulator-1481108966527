@@ -110,7 +110,7 @@ font-weight: bold;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 100000; /* Sit on top */
-    padding-top: 150px; /* Location of the box */
+    padding-top: 93px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -193,7 +193,7 @@ button.closetab {
 <!-- col-md-4 col-sm-4 -->
 
 <div class="row row-centered" style="     margin-top: 38px;" >
-    <div class="col-sm-6 col-md-4 col-centered"   ng-repeat="Device in Devices"  style="padding-bottom: 70px; min-width: 410px;" >
+    <div class="col-sm-6 col-md-4 col-centered animated flipInY"     ng-repeat="Device in Devices"  style="padding-bottom: 70px; min-width: 410px;" >
       <!-- START panel-->
       <div id="panelDemo10" class="panel panel-info" ng-attr-id="{{Device.Name}}"  >
          <div class="panel-heading"><b style="font-size: 22px;">{{Device.Name}}</b><button  type="button" class="closetab" style="position: relative;padding-right: 8px;  margin-top: -8px;"  data-dismiss="modal">&times;</button></div>

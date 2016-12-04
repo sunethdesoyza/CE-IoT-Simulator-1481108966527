@@ -597,15 +597,23 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 						 
 						 $('html, body').animate({scrollTop: $("#"+$scope.Devices[index].Data.Region).offset().top -80 }, 'slow');
 						 $("#"+$scope.Devices[index].Data.Region).addClass("disabledbutton");
+						 
+						
+						 var myVar = setInterval(function(){ 
+							 $("#"+$scope.Devices[index].Data.Region).addClass("animated").addClass("pulse");
+							 setTimeout(function(){
+								 $("#"+$scope.Devices[index].Data.Region).removeClass("animated").removeClass("pulse");
+							 }, 1000);
+						 }, 1500);
 						 $scope.Devices[index].DisplayUpgrading=true;
 						 
 						  setTimeout(function(){
- 							  
+ 							  	
  									$scope.Devices[index].DisplayUpgrading=false;
  									$scope.$apply(); 
- 									
- 									$("#"+$scope.Devices[index].Data.Region).removeClass("disabledbutton");
- 									  
+ 									clearInterval(myVar);
+ 									$("#"+$scope.Devices[index].Data.Region).removeClass("disabledbutton").removeClass("animated").removeClass("pulse");
+ 								
  									
 	 								
 	 		        			   
