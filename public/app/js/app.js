@@ -459,6 +459,21 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 		    window.ontouchmove = null;  
 		    document.onkeydown = null;  
 		}
+
+
+
+	 $scope.myValueFunction = function(WashingMachine) {
+       	 
+		if(WashingMachine.Name == "Washington" || WashingMachine.Name == "Wisconsin"){
+
+			return 1;
+		}else{
+			return WashingMachine.Name;
+		}
+
+		
+		
+    	  }
 	$scope.Devices=[];
 	//$scope.showpopup=true;
 	var Wisconsintempgauge=null;

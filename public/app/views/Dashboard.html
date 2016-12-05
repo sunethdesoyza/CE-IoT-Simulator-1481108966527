@@ -110,7 +110,7 @@ font-weight: bold;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 100000; /* Sit on top */
-    padding-top: 93px; /* Location of the box */
+    padding-top: 150px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -193,12 +193,12 @@ button.closetab {
 <center>
 <!-- col-md-4 col-sm-4 -->
 
-<div class="row row-centered" style="margin-top: 38px;" >
-    <div class="col-sm-6 col-md-4 col-centered "     ng-repeat="Device in Devices"  style="padding-bottom: 70px; min-width: 410px;" >
+<div class="row row-centered" style="margin-top: 38px;max-width:1200px" >
+    <div class="col-sm-6 col-md-6 col-centered "     ng-repeat="Device in Devices| orderBy:myValueFunction"  style="padding-bottom: 70px; min-width: 410px;" >
       <!-- START panel-->
       <div id="panelDemo10" class="panel panel-info animated flipInY" ng-attr-id="{{Device.Name}}"  >
          <div class="panel-heading"><b style="font-size: 22px;">{{Device.Name}}</b><button  type="button" class="closetab" style="position: relative;padding-right: 8px;  margin-top: -8px;"  data-dismiss="modal">&times;</button></div>
-         <div class="panel-body" style="    height: 485px; " >
+         <div class="panel-body" style="    height: 450px; " >
          
          
          <center>
@@ -224,9 +224,7 @@ button.closetab {
              </table>
              </center>
              <!--  -->
-             
-            <br>
-            
+                         
         <center>
          <table>
          <tr>
@@ -277,7 +275,7 @@ button.closetab {
          <div class="panel-footer" style="background-color: #EDECEC; font-size: 12px;"><!-- Washing machine data <b style="color: black;">[40]</b> <span style="cursor: pointer; " ng-click="selectWashingmachine($index)" ><em class="fa fa-ellipsis-v  fa-2x " style=" float: right; color: #5D5D5D"></em></span> --></div>
       </div>
       <!-- END panel Device.DisplayUpgrading-->
-      <div   ng-class="{'visibilityMyClass': !Device.DisplayUpgrading}" style=" margin-top: -80px; opacity: 1;">
+      <div   ng-class="{'visibilityMyClass': !Device.DisplayUpgrading}" style=" margin-top: -85px; opacity: 1;">
             <!--  <font style="font-size: 20px;">Upgrading</font><img src="app/img/ellipsis.gif"/> -->
              
              	<div class="loader">
