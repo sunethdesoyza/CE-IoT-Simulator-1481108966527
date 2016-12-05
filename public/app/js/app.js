@@ -596,6 +596,9 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 						 
 						 
 						 $('html, body').animate({scrollTop: $("#"+$scope.Devices[index].Data.Region).offset().top -80 }, 'slow');
+						 
+						 $("#"+$scope.Devices[index].Data.Region).removeClass("animated").removeClass("flipInY");
+
 						 $("#"+$scope.Devices[index].Data.Region).addClass("disabledbutton");
 						 
 						
@@ -603,8 +606,8 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
 							 $("#"+$scope.Devices[index].Data.Region).addClass("animated").addClass("pulse");
 							 setTimeout(function(){
 								 $("#"+$scope.Devices[index].Data.Region).removeClass("animated").removeClass("pulse");
-							 }, 1000);
-						 }, 1500);
+							 }, 800);
+						 }, 1200);
 						 $scope.Devices[index].DisplayUpgrading=true;
 						 
 						  setTimeout(function(){
@@ -612,7 +615,7 @@ App.controller('DashboardController', ['$scope', '$http', '$state','$timeout','$
  									$scope.Devices[index].DisplayUpgrading=false;
  									$scope.$apply(); 
  									clearInterval(myVar);
- 									$("#"+$scope.Devices[index].Data.Region).removeClass("disabledbutton").removeClass("animated").removeClass("pulse");
+ 									$("#"+$scope.Devices[index].Data.Region).removeClass("disabledbutton").addClass("animated").addClass("flipInY");
  								
  									
 	 								
