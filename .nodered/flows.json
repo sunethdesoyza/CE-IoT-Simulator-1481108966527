@@ -189,9 +189,7 @@
         "x": 583,
         "y": 98,
         "wires": [
-            [
-                "5816d9b1.75e528"
-            ]
+            []
         ]
     },
     {
@@ -215,9 +213,7 @@
         "x": 590.9999847412109,
         "y": 166,
         "wires": [
-            [
-                "27089cc4.b36404"
-            ]
+            []
         ]
     },
     {
@@ -388,9 +384,7 @@
         "x": 582.9999847412109,
         "y": 248,
         "wires": [
-            [
-                "b80cc682.607a08"
-            ]
+            []
         ]
     },
     {
@@ -423,9 +417,7 @@
         "x": 600.9999847412109,
         "y": 309,
         "wires": [
-            [
-                "201e9e48.6a1ad2"
-            ]
+            []
         ]
     },
     {
@@ -458,9 +450,7 @@
         "x": 602.9999847412109,
         "y": 373,
         "wires": [
-            [
-                "e082d36e.b4b07"
-            ]
+            []
         ]
     },
     {
@@ -493,9 +483,7 @@
         "x": 606.9999847412109,
         "y": 437,
         "wires": [
-            [
-                "31be356e.7102ea"
-            ]
+            []
         ]
     },
     {
@@ -528,9 +516,7 @@
         "x": 610.9999847412109,
         "y": 514.0000305175781,
         "wires": [
-            [
-                "6ad2ba45.6283d4"
-            ]
+            []
         ]
     },
     {
@@ -788,7 +774,7 @@
         "y": 265,
         "wires": [
             [
-                "11ffc5cb.240c4a"
+                "5257e390.a2595c"
             ]
         ]
     },
@@ -818,7 +804,7 @@
         "y": 316,
         "wires": [
             [
-                "11ffc5cb.240c4a"
+                "5257e390.a2595c"
             ]
         ]
     },
@@ -848,7 +834,7 @@
         "y": 367,
         "wires": [
             [
-                "11ffc5cb.240c4a"
+                "5257e390.a2595c"
             ]
         ]
     },
@@ -878,7 +864,7 @@
         "y": 425,
         "wires": [
             [
-                "11ffc5cb.240c4a"
+                "5257e390.a2595c"
             ]
         ]
     },
@@ -908,7 +894,7 @@
         "y": 473,
         "wires": [
             [
-                "11ffc5cb.240c4a"
+                "5257e390.a2595c"
             ]
         ]
     },
@@ -1156,7 +1142,7 @@
         "type": "function",
         "z": "f657b46d.c7ee58",
         "name": "SimulatorInitializer",
-        "func": "var globalContext = context.global;\nglobalContext.set(\"pasueDevice\", null);\nglobalContext.set(\"1797B5-D143-4F90\",{\n    \"active\": true,\n    \"currentCycle\": 25,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 67,\n        \"FamilyMembers\": 5,\n        \"income\": 48000,\n        \"Name\": \"Francene Noelia\",\n        \"zipcode\": 95118\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 56.48145,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 3,\n    \"location\": {\n        \"lat\": 44.694094,\n        \"long\": -89.707840\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-100\",\n    \"name\": \"washer1\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"1797B5-D143-4F90\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 2,\n    \"timestamp\": 1480333728717,\n    \"type\": \"washer\",\n    \"vibration\": 44,\n    \"waterPressure\": 88.70406,\n    \"WaterUsage\": 55,\n    \"Region\":\"Wisconsin\"\n});\n\nglobalContext.set(\"OA2895-64OB-DBLF\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 55,\n        \"FamilyMembers\": 3,\n        \"income\": 42000,\n        \"Name\": \"James Smith\",\n        \"zipcode\": 20012\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 47.350494,\n        \"long\": -120.369074\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-100\",\n    \"name\": \"washer2\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"OA2895-64OB-DBLF\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 5,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 45,\n    \"Region\":\"Washington\"\n});\n\nglobalContext.set(\"5D5B6D-B3ED-4BE4\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 68,\n        \"FamilyMembers\": 6,\n        \"income\": 50000,\n        \"Name\": \"Linda Hill\",\n        \"zipcode\": 97202\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 34.0863543,\n        \"long\": -116.4229661\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-101\",\n    \"name\": \"washer3\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"5D5B6D-B3ED-4BE4\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 20,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 31,\n    \"Region\":\"Arizona\"\n});\nglobalContext.set(\"F3386A-2FB4-4E7B\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 30,\n        \"FamilyMembers\": 3,\n        \"income\": 28000,\n        \"Name\": \"Kevin Young\",\n        \"zipcode\": 59001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 37.1870659,\n        \"long\": -123.7638657\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-102\",\n    \"name\": \"washer4\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"F3386A-2FB4-4E7B\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 17,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 34,\n    \"Region\":\"California\"\n});\nglobalContext.set(\"5AI0TO-FEN7-WY68\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 40,\n        \"FamilyMembers\": 4,\n        \"income\": 38000,\n        \"Name\": \"Edward Nelson\",\n        \"zipcode\": 90003\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 27.5223247,\n        \"long\": -88.2983773\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-102\",\n    \"name\": \"washer5\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"5AI0TO-FEN7-WY68\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 18,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 29,\n    \"Region\":\"Florida\"\n});\nglobalContext.set(\"FCD840-C37E-455D\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 50,\n        \"FamilyMembers\": 5,\n        \"income\": 38000,\n        \"Name\": \"Elizabeth Lee\",\n        \"zipcode\": 80203\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 40.6971494,\n        \"long\": -74.2598643\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-103\",\n    \"name\": \"washer6\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"FCD840-C37E-455D\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 14,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 31,\n    \"Region\":\"New York\"\n});\nglobalContext.set(\"FFF0F9-A134-9994\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 38,\n        \"FamilyMembers\": 4,\n        \"income\": 26000,\n        \"Name\": \"Jason hue\",\n        \"zipcode\": 85001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 35.7469228,\n        \"long\": -90.4700919\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-104\",\n    \"name\": \"washer7\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"FFF0F9-A134-9994\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 16,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 29,\n    \"Region\":\"Tennessee\"\n});\nglobalContext.set(\"2245BD-3DFA-4297\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 32,\n        \"FamilyMembers\": 2,\n        \"income\": 25000,\n        \"Name\": \"Jason Nelson\",\n        \"zipcode\": 85001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 31.0920241,\n        \"long\": -104.5693688\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-104\",\n    \"name\": \"washer7\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"2245BD-3DFA-4297\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 16,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 29,\n    \"Region\":\"Texas\"\n});\nglobalContext.set(\"FFF0F9-A134-1111\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 32,\n        \"FamilyMembers\": 2,\n        \"income\": 25000,\n        \"Name\": \"Jason Nelson\",\n        \"zipcode\": 85001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 37.982229,\n        \"long\": -81.7020691\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-104\",\n    \"name\": \"washer8\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"FFF0F9-A134-1111\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 13,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 32,\n    \"Region\":\"Virginia\"\n});\nmsg.payload = \"Simulation Started\";\nmsg.headers = {\n         \"Content-type\" : \"text/plain\"\n     }\nreturn msg;",
+        "func": "var globalContext = context.global;\nglobalContext.set(\"pasueDevice\", null);\nglobalContext.set(\"1797B5-D143-4F90\",{\n    \"active\": true,\n    \"currentCycle\": 25,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 67,\n        \"FamilyMembers\": 5,\n        \"income\": 48000,\n        \"Name\": \"Francene Noelia\",\n        \"zipcode\": 95118\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 56.48145,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 3,\n    \"location\": {\n        \"lat\": 44.694094,\n        \"long\": -89.707840\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-100\",\n    \"name\": \"Washer-1\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"1797B5-D143-4F90\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 2,\n    \"timestamp\": 1480333728717,\n    \"type\": \"washer\",\n    \"vibration\": 44,\n    \"waterPressure\": 88.70406,\n    \"WaterUsage\": 55,\n    \"Region\":\"Wisconsin\"\n});\n\nglobalContext.set(\"OA2895-64OB-DBLF\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 55,\n        \"FamilyMembers\": 3,\n        \"income\": 42000,\n        \"Name\": \"James Smith\",\n        \"zipcode\": 20012\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 47.350494,\n        \"long\": -120.369074\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-100\",\n    \"name\": \"Washer-2\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"OA2895-64OB-DBLF\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 5,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 45,\n    \"Region\":\"Washington\"\n});\n\nglobalContext.set(\"5D5B6D-B3ED-4BE4\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 68,\n        \"FamilyMembers\": 6,\n        \"income\": 50000,\n        \"Name\": \"Linda Hill\",\n        \"zipcode\": 97202\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 34.0863543,\n        \"long\": -116.4229661\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-101\",\n    \"name\": \"Washer-3\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"5D5B6D-B3ED-4BE4\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 20,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 31,\n    \"Region\":\"Arizona\"\n});\nglobalContext.set(\"F3386A-2FB4-4E7B\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 30,\n        \"FamilyMembers\": 3,\n        \"income\": 28000,\n        \"Name\": \"Kevin Young\",\n        \"zipcode\": 59001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 37.1870659,\n        \"long\": -123.7638657\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-101\",\n    \"name\": \"Washer-4\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"F3386A-2FB4-4E7B\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 17,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 34,\n    \"Region\":\"California\"\n});\nglobalContext.set(\"5AI0TO-FEN7-WY68\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 40,\n        \"FamilyMembers\": 4,\n        \"income\": 38000,\n        \"Name\": \"Edward Nelson\",\n        \"zipcode\": 90003\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 27.5223247,\n        \"long\": -88.2983773\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-101\",\n    \"name\": \"Washer-5\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"5AI0TO-FEN7-WY68\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 18,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 29,\n    \"Region\":\"Florida\"\n});\nglobalContext.set(\"FCD840-C37E-455D\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 50,\n        \"FamilyMembers\": 5,\n        \"income\": 38000,\n        \"Name\": \"Elizabeth Lee\",\n        \"zipcode\": 80203\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 40.6971494,\n        \"long\": -74.2598643\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-101\",\n    \"name\": \"Washer-6\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"FCD840-C37E-455D\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 14,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 31,\n    \"Region\":\"New York\"\n});\nglobalContext.set(\"FFF0F9-A134-9994\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 38,\n        \"FamilyMembers\": 4,\n        \"income\": 26000,\n        \"Name\": \"Jason hue\",\n        \"zipcode\": 85001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 35.7469228,\n        \"long\": -90.4700919\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-101\",\n    \"name\": \"Washer-7\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"FFF0F9-A134-9994\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 16,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 29,\n    \"Region\":\"Tennessee\"\n});\nglobalContext.set(\"2245BD-3DFA-4297\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 32,\n        \"FamilyMembers\": 2,\n        \"income\": 25000,\n        \"Name\": \"Jason Nelson\",\n        \"zipcode\": 85001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 31.0920241,\n        \"long\": -104.5693688\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-101\",\n    \"name\": \"Washer-8\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"2245BD-3DFA-4297\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 16,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 29,\n    \"Region\":\"Texas\"\n});\nglobalContext.set(\"FFF0F9-A134-1111\",{\n    \"active\": true,\n    \"currentCycle\": 23,\n    \"cycleStatus\": \"completed\",\n    \"detergent\": 20,\n    \"duration\": 60,\n    \"Errorcode\": null,\n    \"failureType\": null,\n    \"FamilyData\": {\n        \"Age\": 32,\n        \"FamilyMembers\": 2,\n        \"income\": 25000,\n        \"Name\": \"Jason Nelson\",\n        \"zipcode\": 85001\n    },\n    \"firmware\": 'v3.0',\n    \"Humidity\": 48.383003,\n    \"LoadSize\": \"0.75\",\n    \"LoadWeight\": 27.657206,\n    \"location\": {\n        \"lat\": 37.982229,\n        \"long\": -81.7020691\n    },\n    \"Make\": \"JKEnterprise\",\n    \"Model\": \"LFW-101\",\n    \"name\": \"Washer-9\",\n    \"PowerUsage\": 71.00391,\n    \"program\": \"Cold\",\n    \"SerialNo\": \"FFF0F9-A134-1111\",\n    \"SKU\": \"23FF53-6269\",\n    \"startTime\": \"17:18:22\",\n    \"status\": \"Working\",\n    \"temperature\": 13,\n    \"timestamp\": 1480333740717,\n    \"type\": \"washer\",\n    \"vibration\": 6,\n    \"waterPressure\": 37.670483,\n    \"WaterUsage\": 32,\n    \"Region\":\"Virginia\"\n});\nmsg.payload = \"Simulation Started\";\nmsg.headers = {\n         \"Content-type\" : \"text/plain\"\n     }\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 853.8957824707031,
@@ -1339,9 +1325,7 @@
         "x": 605.8957672119141,
         "y": 576.1111145019531,
         "wires": [
-            [
-                "ab2e37c.b50c1c8"
-            ]
+            []
         ]
     },
     {
@@ -1370,7 +1354,7 @@
         "y": 523.111083984375,
         "wires": [
             [
-                "11ffc5cb.240c4a"
+                "5257e390.a2595c"
             ]
         ]
     },
@@ -1434,9 +1418,7 @@
         "x": 614.7289123535156,
         "y": 647.1318969726562,
         "wires": [
-            [
-                "a26a6348.f45e4"
-            ]
+            []
         ]
     },
     {
@@ -1495,7 +1477,7 @@
         "y": 604,
         "wires": [
             [
-                "11ffc5cb.240c4a"
+                "5257e390.a2595c"
             ]
         ]
     },
@@ -1526,6 +1508,29 @@
         "wires": [
             [
                 "b34ffd5f.90933"
+            ]
+        ]
+    },
+    {
+        "id": "5257e390.a2595c",
+        "type": "delay",
+        "z": "244283f1.61aa5c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "30",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 591,
+        "y": 510,
+        "wires": [
+            [
+                "11ffc5cb.240c4a"
             ]
         ]
     }
