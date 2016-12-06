@@ -189,7 +189,9 @@
         "x": 583,
         "y": 98,
         "wires": [
-            []
+            [
+                "5816d9b1.75e528"
+            ]
         ]
     },
     {
@@ -213,7 +215,9 @@
         "x": 590.9999847412109,
         "y": 166,
         "wires": [
-            []
+            [
+                "27089cc4.b36404"
+            ]
         ]
     },
     {
@@ -266,8 +270,8 @@
         "qos": "2",
         "name": "OA2895-64OB-DBLF",
         "service": "registered",
-        "x": 858.9999847412109,
-        "y": 168,
+        "x": 850,
+        "y": 165,
         "wires": []
     },
     {
@@ -381,7 +385,7 @@
         "func": "var globalContext = context.global; \nif(globalContext.get('5D5B6D-B3ED-4BE4').SerialNo != globalContext.get('pasueDevice') ){\n    msg.payload = {\"d\":globalContext.get('5D5B6D-B3ED-4BE4')};\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 582.9999847412109,
+        "x": 609,
         "y": 248,
         "wires": [
             []
@@ -774,7 +778,7 @@
         "y": 265,
         "wires": [
             [
-                "5257e390.a2595c"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -804,7 +808,7 @@
         "y": 316,
         "wires": [
             [
-                "5257e390.a2595c"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -834,7 +838,7 @@
         "y": 367,
         "wires": [
             [
-                "5257e390.a2595c"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -864,7 +868,7 @@
         "y": 425,
         "wires": [
             [
-                "5257e390.a2595c"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -894,7 +898,7 @@
         "y": 473,
         "wires": [
             [
-                "5257e390.a2595c"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -1125,7 +1129,7 @@
         "type": "function",
         "z": "f657b46d.c7ee58",
         "name": "Update Firmware payload",
-        "func": "var globalContext = context.global; \n\n\nif(msg.payload.hasOwnProperty('SerialNo') && msg.payload.hasOwnProperty('firmware')){\nif(globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0] < JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]){\n    \n    \nvar Serial = msg.payload.SerialNo;\nglobalContext.set(\"pasueDevice\", Serial);\n\n    setTimeout(function(){\n    globalContext.get(msg.payload.SerialNo).WaterUsage = Math.floor(Math.random() * (32 - 25 + 1) + 25);\n    globalContext.get(msg.payload.SerialNo).firmware = \"v4.0\"\n    globalContext.set(\"pasueDevice\", null);    \n    }, 10000);\n\n}\n}else{\n    \n    return msg\n}\n\n\n\n//return {\"current\" : globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0],\"requested\":JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]};\n",
+        "func": "var globalContext = context.global; \n\n\nif(msg.payload.hasOwnProperty('SerialNo') && msg.payload.hasOwnProperty('firmware')){\nif(globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0] < JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]){\n    \n    \nvar Serial = msg.payload.SerialNo;\nglobalContext.set(\"pasueDevice\", Serial);\n\n    setTimeout(function(){\n    globalContext.get(msg.payload.SerialNo).WaterUsage = Math.floor(Math.random() * (38 - 36 + 1) + 36);\n    globalContext.get(msg.payload.SerialNo).firmware = \"v4.0\"\n    globalContext.set(\"pasueDevice\", null);    \n    }, 10000);\n\n}\n}else{\n    \n    return msg\n}\n\n\n\n//return {\"current\" : globalContext.get(msg.payload.SerialNo).firmware.match(/\\d+/)[0],\"requested\":JSON.stringify(msg.payload.firmware).match(/\\d+/)[0]};\n",
         "outputs": 1,
         "noerr": 0,
         "x": 608.8957824707031,
@@ -1354,7 +1358,7 @@
         "y": 523.111083984375,
         "wires": [
             [
-                "5257e390.a2595c"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -1477,7 +1481,7 @@
         "y": 604,
         "wires": [
             [
-                "5257e390.a2595c"
+                "11ffc5cb.240c4a"
             ]
         ]
     },
@@ -1508,29 +1512,6 @@
         "wires": [
             [
                 "b34ffd5f.90933"
-            ]
-        ]
-    },
-    {
-        "id": "5257e390.a2595c",
-        "type": "delay",
-        "z": "244283f1.61aa5c",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "30",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "30",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "x": 591,
-        "y": 510,
-        "wires": [
-            [
-                "11ffc5cb.240c4a"
             ]
         ]
     }
