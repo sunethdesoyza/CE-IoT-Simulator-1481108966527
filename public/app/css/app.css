@@ -7064,6 +7064,7 @@ body {
     margin: 0;
   }
 }
+
 @media only screen and (min-width: 768px) {
   body {
     min-height: 100%;
